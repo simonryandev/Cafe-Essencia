@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Café Essência</title>
+</head>
+
+<body>
+  <div class="video-box">
+    <video src="./videos/coffe.mp4" loop muted autoplay></video>
+    <div class="mask"></div>
+  </div>
+
+  <header>
+    <section>
+      <a href="#">
+        <img src="./img/logo.png" alt="cafeteria">
+      </a>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Sobre</a>
+        <a href="#">Cardápio</a>
+        <a href="#">Clientes</a>
+      </nav>
+    </section>
+  </header>
+
+  <section class="main-box">
+    <div>
+      <h2>Bem-vindo ao <span>Café Essência</span></h2>
+      <p>No Café Essência, acreditamos que cada xícara conta uma história. Oferecemos uma seleção exclusiva de grãos
+        premium, preparados com carinho para proporcionar momentos únicos de sabor e aconchego. Venha nos visitar e
+        descubra o verdadeiro prazer de um bom café.</p>
+      <a class="button-link">Garanta Sua Xícara</a>
+    </div>
+  </section>
+
+  <section class="box-about">
+    <h2><span>Sobre</span> Nós</h2>
+    <div class="container-about">
+      <div class="img-about">
+        <img src="./img/about-img.jpeg" alt="Foto de uma xícara de café.">
+      </div>
+
+      <div class="text-about">
+        <h3>Uma Experiência Única em Cada Xícara</h3>
+        <p>No coração da cidade, nossa cafeteria foi criada para oferecer mais do que apenas um café. Aqui, combinamos
+          sabores marcantes, um ambiente acolhedor e momentos inesquecíveis para você e sua companhia.</p>
+        <p>Trabalhamos com grãos selecionados e métodos de preparo que exaltam a essência de cada bebida. Seja para
+          começar o dia, relaxar ou encontrar amigos, nosso espaço é o lugar perfeito para você.</p>
+        <a class="button-link">Saiba Mais</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <h2>Nosso <span>Cardápio</span></h2>
+
+    <div class="filters">
+      <button class="filter" onclick="filterItems('todos')">Todos</button>
+      <button class="filter" onclick="filterItems('cafes')">Cafés</button>
+      <button class="filter" onclick="filterItems('bebidas')">Bebidas</button>
+      <button class="filter" onclick="filterItems('sobremesas')">Sobremesas</button>
+      <button class="filter" onclick="filterItems('lanches')">Lanches</button>
+    </div>
+
+    <div class="menu-items">
+      <div class="menu-item cafes">
+        <img src="./img/cafe-expresso.jpg" alt="Café Expresso. Foto de Adi Goldstein na Unsplash.">
+        <h3>Café Expresso</h3>
+        <p>R$ 10,00</p>
+        <button class="button-details" onclick="openModal('cafe1')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item bebidas">
+        <img src="./img/suco-natural.jpg" alt="Suco Natural. Foto de VD Photography na Unsplash.">
+        <h3>Suco Natural</h3>
+        <p>R$ 8,00</p>
+        <button class="button-details" onclick="openModal('bebida1')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item sobremesas">
+        <img src="./img/torta-limao.jpg" alt="Torta de Limão. Foto de Molly Keesling na Unsplash.">
+        <h3>Torta de Limão</h3>
+        <p>R$ 12,00</p>
+        <button class="button-details" onclick="openModal('sobremesa1')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item cafes">
+        <img src="./img/cappuccino.jpg" alt="Cappuccino. Foto de Lex Sirikiat na Unsplash.">
+        <h3>Cappuccino</h3>
+        <p>R$ 12,00</p>
+        <button class="button-details" onclick="openModal('cafe2')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item bebidas">
+        <img src="./img/chá-gelado.jpg" alt="Chá Gelado. Foto de Crystal Tubens na Unsplash.">
+        <h3>Chá Gelado</h3>
+        <p>R$ 6,00</p>
+        <button class="button-details" onclick="openModal('bebida2')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item sobremesas">
+        <img src="./img/brownie.jpg" alt="Brownie. Foto de Sabri Tuzcu na Unsplash.">
+        <h3>Brownie</h3>
+        <p>R$ 15,00</p>
+        <button class="button-details" onclick="openModal('sobremesa2')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item cafes">
+        <img src="./img/café-canela.jpg" alt="Café de Canela. Foto de Joanna Kosinska na Unsplash.">
+        <h3>Café de Canela</h3>
+        <p>R$ 11,00</p>
+        <button class="button-details" onclick="openModal('cafe3')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item bebidas">
+        <img src="./img/smoothie-frutas-vermelhas.jpg"
+          alt="Smoothie de Frutas Vermelhas. Foto de Douglas Bagg na Unsplash.">
+        <h3>Smoothie de Frutas Vermelhas</h3>
+        <p>R$ 15,00</p>
+        <button class="button-details" onclick="openModal('bebida3')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item sobremesas">
+        <img src="./img/cheesecake-frutas-vermelhas.jpg"
+          alt="Cheesecake de Frutas Vermelhas. Foto de Angie Conti na Unsplash.">
+        <h3>Cheesecake de Frutas Vermelhas</h3>
+        <p>R$ 18,00</p>
+        <button class="button-details" onclick="openModal('sobremesa3')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item lanches">
+        <img src="./img/coxinha.jpg" alt="Coxinha. Foto de Victor Cayke na Pexels.">
+        <h3>Coxinha</h3>
+        <p>R$ 3,00</p>
+        <button class="button-details" onclick="openModal('lanche1')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item lanches">
+        <img src="./img/pao-queijo.jpg" alt="Pão de Queijo. Foto de Rodolfo Allen_ na Unsplash.">
+        <h3>Pão de Queijo</h3>
+        <p>R$ 4,00</p>
+        <button class="button-details" onclick="openModal('lanche2')">Ver Detalhes</button>
+      </div>
+      <div class="menu-item lanches">
+        <img src="./img/tapioca-carne-seca.jpg"
+          alt="Tapioca de Carne Seca com Catupiry. Foto de Hiure Gomes Fernandes na Pexels.">
+        <h3>Tapioca de Carne Seca com Catupiry</h3>
+        <p>R$ 9,00</p>
+        <button class="button-details" onclick="openModal('lanche3')">Ver Detalhes</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+      <button onclick="closeModal()">Fechar</button>
+    </div>
+  </div>
+
+  <section class="customers-section">
+    <h2>O que nossos <span>clientes</span> dizem</h2>
+    <div class="customers-container">
+      <div class="customers">
+        <p>"O café aqui é incrível! Sempre começo meu dia com um expresso do Café Essência."</p>
+        </p>
+        <h3>- Maria Silva</h3>
+      </div>
+      <div class="customers">
+        <p>"A torta de limão é simplesmente divina. Um ambiente perfeito para relaxar."</p>
+        <h3>- João Pereira</h3>
+      </div>
+      <div class="customers">
+        <p>"A coxinha é muito saborosa! A massa é bem crocante e o recheio de frango é delicioso. Perfeita para
+          acompanhar o café!"</p>
+        <h3>- Ana Santos</h3>
+      </div>
+      <div class="customers">
+        <p>"Suco super refrescante e natural! Ideal para os dias mais quentes. Adoçado na medida certa!"</p>
+        <h3>- Roberto Carlos</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="sobre-nos">
+        <h3>Sobre Nós</h3>
+        <p>Bem-vindo à nossa cafeteria! Oferecemos os melhores cafés, bebidas, sobremesas e lanches para tornar seu dia
+          mais especial.</p>
+      </div>
+      <div class="links-rapidos">
+        <h3>Links Rápidos</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Cardápio</a></li>
+          <li><a href="#">Clientes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Café Essência. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
